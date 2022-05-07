@@ -1,0 +1,27 @@
+package dojo;
+
+import javax.swing.JOptionPane;
+
+public class CalcInvest {
+
+	public static void main(String[] args) {
+		
+	
+        double montante, juros1,juros;
+        int mes;
+       
+        
+        mes = Integer.parseInt (JOptionPane.showInputDialog ("Digite o tempo em meses"));
+        montante = Double.parseDouble (JOptionPane.showInputDialog ("Digite o dinheiro a investir: "));
+        juros = Double.parseDouble (JOptionPane.showInputDialog ("Digite a taxa de juros por mes"));
+      
+        juros1 = juros/100;
+      
+        for (int tempo1=1; tempo1<=mes; ++tempo1){
+              montante+=(juros1*montante);
+        }
+       
+        JOptionPane.showMessageDialog (null, "O total é: " + montante, "Resultado",
+        JOptionPane.INFORMATION_MESSAGE);
+    }
+}
